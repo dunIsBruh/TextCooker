@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Cooker - История</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="user-icon guest"></div>
+        <div class="user-login" id="userLogin" style="display: none;"></div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="documentHistory.html">История</a></li>
+            <li><a href="templateList.html">Шаблоны</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+            <li><a href="#" id="logoutBtn" style="display: none;">Выход</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page">
+            <h1>История документа</h1>
+            
+            <div class="form-group">
+                <label for="documentSelect">Выберите документ:</label>
+                <select id="documentSelect" style="width: 100%; padding: 8px; margin-top: 5px;">
+                    <option value="">Загрузка документов...</option>
+                </select>
+            </div>
+
+            <div class="chat-container" id="historyContainer">
+                <div class="loading">Выберите документ для просмотра истории</div>
+            </div>
+
+            <div id="alertContainer"></div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/documentHistory.js"></script>
+</body>
+</html>
+
+
