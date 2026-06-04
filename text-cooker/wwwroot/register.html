@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Cooker - Регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="user-icon guest"></div>
+        <div class="user-login" id="userLogin" style="display: none;"></div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="documentHistory.html">История</a></li>
+            <li><a href="templateList.html">Шаблоны</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+            <li><a href="#" id="logoutBtn" style="display: none;">Выход</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page">
+            <h1>Регистрация</h1>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="login">Логин:</label>
+                    <input type="text" id="login" name="login" required>
+                    <div class="error-message" id="loginError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error-message" id="passwordError"></div>
+                    <small style="color: #666; font-size: 12px; margin-top: 5px; display: block;">
+                        Пароль должен содержать минимум 8 символов, цифру, заглавную букву и спецсимвол (!@#$%^&*)
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Подтверждение пароля:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            </form>
+
+            <div id="alertContainer"></div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
+
+
